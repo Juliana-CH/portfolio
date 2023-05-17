@@ -1,7 +1,17 @@
-@import './variables';
+@import "./custom-properties";
+@import "./variables";
+@import "./mixins";
+@import "./site";
+@import "./utilities";
 
 
-a {
+body {
+    background-color: $bg-color;
+    color: var(--color-blue-20);
+}
+
+
+/* a {
     font-weight: 500;
     color: #646cff;
     text-decoration: inherit;
@@ -53,5 +63,5 @@ a {
     button {
       background-color: #f9f9f9;
     }
-  }
-  
+  }*/
+

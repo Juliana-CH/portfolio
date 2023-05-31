@@ -1,5 +1,6 @@
 @import "../../scss/global.scss";
 
 .landing {
-    background-color: $bg-color;
+    background-color: var(--first-bg-color);
+    color: var(--font-color);
 }

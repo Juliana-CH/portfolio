@@ -12,7 +12,7 @@ function Menu() {
   return (
     <>
       <header className="header-menu">
-        <div className="profile">
+        <div className="profile-container">
           <img className="profile-image" src="./src/assets/Juliana.png" alt="Imagem pequena de perfil."/>
           <span className="profile-name">JULIANA HAZIM</span>
         </div>

@@ -1,20 +1,18 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import Landing from "./views/landing/Landing.jsx";
-import Projects from "./views/projects/Projects.jsx";
-import ProjectsDetails from "./views/project-details/ProjectDetails.jsx";
-import './index.scss';
+import ReactDOM from "react-dom/client";
+import Menu from "./components/menu/Menu";
+import Landing from "./views/landing/Landing";
+import Projects from "./views/projects/Projects";
+import "./index.scss";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Menu />,
     errorElement: <div>Esto está roto</div>,
     children: [
       { index: true, element: <Landing /> },
-      { path: 'projects', element: <Projects /> }, 
-      { path: 'projects/:projectId', element: <ProjectDetails /> }, 
+      { path: "projects", element: <Projects /> },
     ],
   },
 ]);

@@ -1,0 +1,75 @@
+.header-menu {
+  position: fixed;
+  display: flex;
+  background-color: var(--first-color);
+  color: var(--second-font-color);
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+    .profile-image {
+      margin: auto;
+      background-color: var(--second-font-color);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .profile-name {
+      margin: 5px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+  .menu {
+    display: flex;
+    width: 100vw;
+    justify-content: flex-end;
+    font-weight: 700;
+    transform: color .2s;
+
+    a {
+      padding: 20px;
+      color: var(--second-font-color);
+
+      &:hover {
+        box-shadow: inset 0px 4px 0px 0px var(--third-color); //Efeito do mouse no link do menu
+      }
+    }
+
+    &__close {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      position: fixed;
+      flex-direction: column;
+      background-color: var(--first-color);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateX(100vh);
+
+      &--show {
+        transform: translateX(0);
+      }
+
+      &__close {
+        display: inline-block;
+      }
+    }
+  }
+
+  .show-menu {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: inline-block;
+    }
+  }
